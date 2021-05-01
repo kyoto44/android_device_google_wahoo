@@ -697,6 +697,10 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.camera.gcam.fd.ensemble=1
 
+# Prebuilt GcamGO
+PRODUCT_PACKAGES += \
+    GCamGOPrebuilt
+
 # Preopt SystemUI
 PRODUCT_DEXPREOPT_SPEED_APPS += \
     SystemUI
@@ -743,10 +747,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
     debug.sf.early_gl_phase_offset_ns=3000000
 PRODUCT_PROPERTY_OVERRIDES += \
     debug.sf.early_gl_app_phase_offset_ns=15000000
-
-# Use Vulkan backend for Skia UI rendering
-PRODUCT_PRODUCT_PROPERTIES += \
-    debug.hwui.renderer=skiavk
 
 # Enable blurs
 PRODUCT_PRODUCT_PROPERTIES += \
