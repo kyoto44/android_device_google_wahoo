@@ -374,13 +374,12 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.vendor.bluetooth.emb_wp_mode=false \
     ro.vendor.bluetooth.wipower=false
 
-# DRM HAL
+# DRM
 PRODUCT_PACKAGES += \
-    android.hardware.drm@1.0-impl:32 \
+    android.hardware.drm@1.0-impl \
     android.hardware.drm@1.0-service \
-    android.hardware.drm@1.3-service.clearkey \
-    android.hardware.drm@1.3-service.widevine \
-    move_widevine_data.sh
+    android.hardware.drm@1.1.vendor \
+    android.hardware.drm@1.4-service.clearkey
 
 # NFC packages
 PRODUCT_PACKAGES += \
@@ -579,6 +578,7 @@ PRODUCT_COPY_FILES += \
 
 # Fingerprint HIDL implementation
 PRODUCT_PACKAGES += \
+    android.hardware.biometrics.fingerprint@2.1.vendor \
     android.hardware.biometrics.fingerprint@2.1-service.fpc
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/init.fingerprint.sh:$(TARGET_COPY_OUT_VENDOR)/bin/init.fingerprint.sh \
@@ -747,6 +747,34 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # CHRE
 PRODUCT_PACKAGES += \
     chre
+
+# Update this list with what each blob is actually for
+# libstdc++: hexagon DSP blobs
+PRODUCT_PACKAGES += \
+    libstdc++.vendor
+
+PRODUCT_PACKAGES += \
+    android.frameworks.displayservice@1.0.vendor
+
+# GNSS
+PRODUCT_PACKAGES += \
+    android.hardware.gnss@1.0.vendor
+
+# WiFi
+PRODUCT_PACKAGES += \
+    android.system.net.netd@1.0 \
+    android.system.net.netd@1.0.vendor \
+    netutils-wrapper-1.0
+
+# Keymaster HAL
+PRODUCT_PACKAGES += \
+    android.hardware.keymaster@3.0-impl \
+    android.hardware.keymaster@3.0-service
+
+# Gatekeeper HAL
+PRODUCT_PACKAGES += \
+    android.hardware.gatekeeper@1.0-impl \
+    android.hardware.gatekeeper@1.0-service
 
 include hardware/google/pixel/vibrator/drv2624/device.mk
 include hardware/google/pixel/mm/device_legacy.mk
