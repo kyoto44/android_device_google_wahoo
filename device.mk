@@ -195,10 +195,6 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.software.vulkan.deqp.level-2020-03-01.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.software.vulkan.deqp.level.xml \
     frameworks/native/data/etc/android.hardware.telephony.carrierlock.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.telephony.carrierlock.xml \
 
-# power.stats HAL
-PRODUCT_PACKAGES += \
-    android.hardware.power.stats@1.0-service.pixel
-
 # health HAL
 PRODUCT_PACKAGES += \
     android.hardware.health@2.0-service.wahoo
@@ -801,7 +797,3 @@ PRODUCT_PACKAGES += \
 
 include hardware/google/pixel/vibrator/drv2624/device.mk
 include hardware/google/pixel/mm/device_legacy.mk
-include hardware/google/pixel/thermal/device.mk
-
-# power HAL
--include hardware/google/pixel/power-libperfmgr/aidl/device.mk
