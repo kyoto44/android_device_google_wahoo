@@ -849,10 +849,6 @@ PRODUCT_PACKAGES += \
     android.hardware.oemlock@1.0 \
     android.hardware.oemlock@1.0.vendor
 
-# Sensors
-PRODUCT_PACKAGES += \
-    android.frameworks.sensorservice@1.0.vendor
-
 # Elmyra
 PRODUCT_PACKAGES += \
     ElmyraService
