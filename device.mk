@@ -779,7 +779,6 @@ PRODUCT_PACKAGES += \
 
 # Build necessary packages for vendor
 PRODUCT_PACKAGES += \
-    chre \
     ese-ls-provision \
     ese-replay \
     libdrm.vendor \
